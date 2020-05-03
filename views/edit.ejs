@@ -28,8 +28,13 @@
                     <br>
                     <fieldset id="sexo">
                         Sexo: 
-                        <input type="radio" name="sexo" value="masculino" value="<%= details.sexo %>">Masculino
-                        <input type="radio" name="sexo" value="feminino" value="<%= details.sexo %>">Feminino
+                        <% if(details.sexo === 'masculino'){ %>
+                        <input type="radio" name="sexo" value="masculino" checked>Masculino
+                        <input type="radio" name="sexo" value="feminino">Feminino
+                        <% }else { %>
+                        <input type="radio" name="sexo" value="masculino">Masculino
+                        <input type="radio" name="sexo" value="feminino" checked>Feminino
+                        <% } %>
                       </fieldset>
                       <a href="/show"><button type="button">Voltar</button></a>
                     <button type="submit">Editar</button>

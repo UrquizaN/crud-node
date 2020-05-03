@@ -28,6 +28,11 @@ app.get('/', (request, response) => {
 app.get('/show', (request, response) => {
     db.collection('data').find().toArray((error, results) => {
         if(error) return console.log(error);
+        results.forEach(element => {
+            element.nascimento = element.nascimento.substring(8, 10) + '/' + 
+            element.nascimento.substring(5, 7) + '/' + 
+            element.nascimento.substring(0, 4)
+        });
             response.render('show.ejs', {data: results});
         });
 });

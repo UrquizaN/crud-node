@@ -54,7 +54,5 @@ table {
     color: white;
   }
   .link {
-    background-color: cornflowerblue;
-    padding: 5px;
-    border-radius: 2px;
+    color: cornflowerblue;
   }
