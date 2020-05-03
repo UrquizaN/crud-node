@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My CRUD in NodeJS</title>
+  <link rel="stylesheet" type="text/css" href="/css/index.css" />
+</head>
+<body>
+  <div class="app">
+    <h2>Registrar<h2>
+      <form action="/show" method="POST">
+          <input type="text" placeholder="Nome" name="name" required>
+          <input type="text" placeholder="Sobrenome" name="surname" required>
+          <br>
+          <input type="text" placeholder="CPF" name="cpf" required>
+          <input type="date" placeholder="Data de nascimento" name="nascimento" required>
+          <br>
+          <input type="text" placeholder="Celular" name="celular" required>
+          <input type="email" placeholder="Email" name="email" required>
+          <br>
+          <input type="text" placeholder="Endereço" name="endereco" required>
+          <input type="text" placeholder="Bairro" name="bairro" required>
+          <br>
+          <input type="text" placeholder="Cidade" name="cidade" required>
+          <input type="text" placeholder="CEP" name="cep" required>
+          <br>
+          <fieldset id="sexo">
+            Sexo: 
+            <input type="radio" name="sexo" value="masculino" required>Masculino
+            <input type="radio" name="sexo" value="feminino" required>Feminino
+          </fieldset>
+          <button type="submit">Registrar</button>
+          <a href="/show"><button type="button">Registros</button></a>
+      </form> 
+  </div>
+</body>
+</html>

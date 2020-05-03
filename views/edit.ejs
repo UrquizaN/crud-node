@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My CRUD in NodeJS</title>
+  <link rel="stylesheet" type="text/css" href="/css/index.css" />
+</head>
+<body>
+    <div class="app">
+        <h2>Editar Registro<h2>
+            <% data.forEach(function(details) { %>
+                <form action="/edit/<%= details._id %>" method="POST">
+                    <input type="text" value="<%= details.name %>" name="name">
+                    <input type="text" value="<%= details.surname %>" name="surname">
+                    <br>
+                    <input type="text" value="<%= details.cpf %>" name="cpf">
+                    <input type="date" value="<%= details.nascimento%>" name="nascimento">
+                    <br>
+                    <input type="text" value="<%= details.celular %>" name="celular">
+                    <input type="email" value="<%= details.email %>" name="email">
+                    <br>
+                    <input type="text" value="<%= details.endereco %>" name="endereco">
+                    <input type="text" value="<%= details.bairro %>" name="bairro">
+                    <br>
+                    <input type="text" value="<%= details.cidade %>" name="cidade">
+                    <input type="text" value="<%= details.cep %>" name="cep">
+                    <br>
+                    <fieldset id="sexo">
+                        Sexo: 
+                        <input type="radio" name="sexo" value="masculino" value="<%= details.sexo %>">Masculino
+                        <input type="radio" name="sexo" value="feminino" value="<%= details.sexo %>">Feminino
+                      </fieldset>
+                      <a href="/show"><button type="button">Voltar</button></a>
+                    <button type="submit">Editar</button>
+                </form> 
+            <% }) %>
+    </div>
+</body>
+</html>
