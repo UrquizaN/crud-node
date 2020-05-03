@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const ObjectId = require('mongodb').ObjectID
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://urquiza:uzn123456789@crudnode-9ajxw.gcp.mongodb.net/test?retryWrites=true&w=majority";
+const uri = "mongodb+srv://urquiza:urquiza12345@crudnode-9ajxw.gcp.mongodb.net/test?retryWrites=true&w=majority";
 
 MongoClient.connect(uri, { useUnifiedTopology: true }, (err, client) => {
     if (err) return console.log(err);
